@@ -7,10 +7,10 @@ import { createNetworkInterface } from 'apollo-upload-client';
 import 'tachyons';
 
 import { Gallery, UploadImage } from './components';
+import { graphqlUrl } from './utils';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
-const graphqlUrl = process.env.REACT_APP_GRAPHQL_URL ? `${process.env.REACT_APP_GRAPHQL_URL}` : 'http://localhost:8000';
 const networkInterface = createNetworkInterface({
   uri: `${graphqlUrl}/graphql`,
 });
